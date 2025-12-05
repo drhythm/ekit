@@ -21,6 +21,11 @@ func NewArrayListOf[T any](src []T) *ArrayList[T] {
 	}
 }
 
+func (a* ArrayList[T]) Len() int {
+	return len(a.vals)
+}
+
+
 func (a *ArrayList[T]) Append(val T) {
 	a.vals = append(a.vals, val)
 }
